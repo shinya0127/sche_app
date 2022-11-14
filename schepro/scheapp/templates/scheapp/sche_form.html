@@ -1,0 +1,7 @@
+<h1>スケジュールの追加</h1>
+<a href="{% url 'schedules' %}">戻る</a>
+
+<form action="" method="post">
+    {% csrf_token %}{{form.as_p}}
+    <input type="submit" value="追加" />
+</form>

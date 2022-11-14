@@ -1,0 +1,13 @@
+<h1>スケジュール</h1>
+<a href="{% url 'create' %}">予定の追加</a>
+
+<table>
+    {% for sche in schedules %}
+    <tr>
+        <td><a href="{% url 'schedule' sche.id %}">{{sche.title}}</a></td>
+        <td>{{sche.sche_date}}</td>
+        <td><a href="{% url 'edit' sche.id %}">編集</a></td>
+        <td><a href="{% url 'delete' sche.id %}">削除</a></td>
+    </tr>
+    {% endfor %}
+</table>
